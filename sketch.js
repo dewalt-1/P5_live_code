@@ -1,6 +1,8 @@
 /**
  * The user can type and their words will appear on the screen.
  */
+
+//test
  
  let message = "";
  let font;
