@@ -1,12 +1,7 @@
-/**
- * The user can type and their words will appear on the screen.
- */
-
-//test
- 
  let message = "";
  let font;
- let draw_a_line = false;
+ let draw_a_line = "make line";
+ let make_mesh = "make mesh";
 
  function preload() {
   font = loadFont(
@@ -23,26 +18,26 @@
  }
  
  function draw(){
-   background(0);
+  background(0);
    text(message, 10, 50);
-   //line();
 
    //*******triggers*******
-   if (message == "make line") {
+   if (message == draw_a_line) {
     line();
    }
 
-   //if (draw_a_line = true){
-    // line();
-   //}
-
-  if (message == "make mesh"){
+  if (message == make_mesh){
     mesh();
   }
     
   }
 
  function keyPressed(){
+
+  /**
+ * The user can type and their words will appear on the screen.
+ */
+
    // First check if the key is something we want to type.
    if (key.length == 1 && key.match(/[\S,\ ,\n]/)) {
      message = message + key;
@@ -58,7 +53,7 @@
 
  function line () {
     strokeWeight(4);
-    stroke(255,255,255);
+    stroke(255);
     line(30, 20, 85, 75);
  }
 
